@@ -59,7 +59,7 @@ public String reverse(String str)
 {
     String sNew = new String();
     for(int i = str.length(); i>0;i--){
-      if(str.substring(i-1,i).equals(""){
+      if(str.substring(i-1,i).equals(" "){
         
       }
       else{
