@@ -38,17 +38,7 @@ public void tester()
 public boolean palindrome(String word)
 {
   String nStr = new String();
-  for(int i = 0; i<word.length();i++){
-    if(word.substring(i,i+1).equals(" ")){
-      
-    }
-    else{
-       nStr = nStr + sWord.substring(i,i+1);
-    }
-  }
-  return nStr;
-  
-  if(nStr.equals(reverse(word))){
+  if(nStr.toLowerCase().spaces(word).onlyLet(word).equals(reverse(word.toLowerCase().spaces(word).onlyLet(word)))){
     return true;
   }
   else{
@@ -59,13 +49,32 @@ public String reverse(String str)
 {
     String sNew = new String();
     for(int i = str.length(); i>0;i--){
-      if(str.substring(i-1,i).equals(" "){
-        
-      }
-      else{
         sNew = sNew + str.substring(i-1,i);
       }
     }
     return sNew;
+  }
+public String spaces(String a)
+{
+  String strA = new String();
+  for(int i = 0; i<a.length();i++){
+    if(a.substring(i,i+1).equals(" ")){
+      
+    }
+    else{
+       strA = strA + a.substring(i,i+1);
+    }
+  }
+  return a;
+  }
+public String onlyLet(String sString)
+  {
+  String strB = "";
+  for(int i = 0;i<sString.length();i++){
+    if(Character.isLetter(sString.charAt(i))==true){
+      strB = strB + sString.charAt(i);
+    }
+  }
+  return strB;
   }
 }
