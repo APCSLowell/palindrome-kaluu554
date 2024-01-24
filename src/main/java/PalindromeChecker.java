@@ -65,7 +65,7 @@ public String spaces(String a)
        strA = strA + a.substring(i,i+1);
     }
   }
-  return a;
+  return strA;
   }
 public String onlyLet(String sString)
   {
