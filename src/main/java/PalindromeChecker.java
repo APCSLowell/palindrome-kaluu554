@@ -37,7 +37,6 @@ public void tester()
 }
 public boolean palindrome(String word)
 {
-  
   if(word.equals(reverse(word))){
     return true;
   }
@@ -51,34 +50,7 @@ public String reverse(String str)
     for(int i = str.length(); i>0;i--){
         sNew = sNew + str.substring(i-1,i);
       }
+  return sNew;
     }
-    return sNew;
-  }
-public String spaces(String a)
-{
-  String strA = new String();
-  for(int i = 0; i<a.length();i++){
-    if(a.substring(i,i+1).equals(" ")){
-      
-    }
-    else{
-       strA = strA + a.substring(i,i+1);
-    }
-  }
-  return strA;
-  }
-public String onlyLet(String sString)
-  {
-  String strB = new String();
-  for(int i = 0;i<sString.length();i++){
-    if(Character.isLetter(sString.charAt(i))==true){
-      strB = strB + sString.charAt(i);
-    }
-  }
-  return strB;
-  }
-public String noCap(String sWord){
-  return sWord.toLowerCase();
-  }
 
 }
