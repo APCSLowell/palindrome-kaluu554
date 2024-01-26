@@ -25,9 +25,6 @@ public void tester()
   System.out.println("there are " + lines.length + " lines");
   for (int i=0; i < lines.length; i++) 
   {
-    lines.spaces(lines[i]);
-    lines.noCap(lines[i]);
-    lines.onlyLet(lines[i]);
     if(palindrome(lines[i])==true)
     {
       System.out.println(lines[i] + " IS a palindrome.");
