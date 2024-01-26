@@ -37,7 +37,10 @@ public void tester()
 }
 public boolean palindrome(String word)
 {
-  if(noSpaces(word).equals(reverse(word))){
+  String word2 = noSpaces(word);
+  String word3 = onlyLetters(word2);
+  String word4 = word3.toLowerCase();
+  if(word.equals(reverse(word4))){
     return true;
   }
   else{
@@ -61,6 +64,16 @@ public String noSpaces(String sWord){
     }
     else{
        str = str + sWord.substring(i,i+1);
+    }
+  }
+  return str;
+}
+
+public String onlyLetters(String sString){
+  String str = "";
+  for(int i = 0;i<sString.length();i++){
+    if(Character.isLetter(sString.charAt(i))==true){
+      str = str + sString.charAt(i);
     }
   }
   return str;
