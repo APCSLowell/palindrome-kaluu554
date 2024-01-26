@@ -25,6 +25,9 @@ public void tester()
   System.out.println("there are " + lines.length + " lines");
   for (int i=0; i < lines.length; i++) 
   {
+    lines.spaces(lines[i]);
+    lines.noCap(lines[i]);
+    lines.onlyLet(lines[i]);
     if(palindrome(lines[i])==true)
     {
       System.out.println(lines[i] + " IS a palindrome.");
@@ -37,7 +40,8 @@ public void tester()
 }
 public boolean palindrome(String word)
 {
-  if(word.toLowerCase().spaces(word).onlyLet(word).equals(reverse(word.toLowerCase().spaces(word).onlyLet(word)))){
+  
+  if(word.equals(reverse(word))){
     return true;
   }
   else{
@@ -68,7 +72,7 @@ public String spaces(String a)
   }
 public String onlyLet(String sString)
   {
-  String strB = "";
+  String strB = new String();
   for(int i = 0;i<sString.length();i++){
     if(Character.isLetter(sString.charAt(i))==true){
       strB = strB + sString.charAt(i);
@@ -76,4 +80,8 @@ public String onlyLet(String sString)
   }
   return strB;
   }
+public String noCap(String sWord){
+  return sWord.toLowerCase();
+  }
+
 }
