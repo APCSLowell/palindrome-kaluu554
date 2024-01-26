@@ -40,7 +40,7 @@ public boolean palindrome(String word)
   String word2 = noSpaces(word);
   String word3 = onlyLetters(word2);
   String word4 = word3.toLowerCase();
-  if(word.equals(reverse(word4))){
+  if(word4.equals(reverse(word4))){
     return true;
   }
   else{
